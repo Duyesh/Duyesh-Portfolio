@@ -7,6 +7,8 @@ import excel1 from '../assets/projects/excel-analytics/excel-1.png'
 import excel2 from '../assets/projects/excel-analytics/excel-2.png'
 import excel3 from '../assets/projects/excel-analytics/excel-3.png'
 import excel4 from '../assets/projects/excel-analytics/excel-4.png'
+import excel5 from '../assets/projects/excel-analytics/excel-5.png'
+
 
 import task1 from '../assets/projects/team-task/team-task-1.png'
 import task2 from '../assets/projects/team-task/team-task-2.png'
@@ -69,7 +71,8 @@ const projectsData = [
             excel1,
             excel2,
             excel3,
-            excel4
+            excel4,
+            excel5
         ]
     },
 
