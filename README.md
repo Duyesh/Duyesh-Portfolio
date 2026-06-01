@@ -4,7 +4,7 @@ A premium cinematic portfolio website built to showcase my projects, technical s
 
 ## Live Demo
 
-[Add Netlify Link Here]
+[Live Link](https://duyesh.netlify.app/)
 
 ---
 
