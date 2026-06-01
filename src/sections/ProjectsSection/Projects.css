@@ -1,0 +1,701 @@
+/* ========================= Projects Section ========================= */
+
+.projects-section {
+
+    width: 100%;
+
+    min-height: 100vh;
+
+    padding:
+    clamp(6rem,10vw,10rem)
+    clamp(1.5rem,5vw,4rem);
+
+    background:
+    linear-gradient(
+        180deg,
+        #050505 0%,
+        #0b0b0b 50%,
+        #101010 100%
+    );
+
+    margin-top: -4rem;
+
+    border-top-left-radius: 3rem;
+    border-top-right-radius: 3rem;
+
+    position: relative;
+    z-index: 4;
+
+}
+
+/* ========================= Header ========================= */
+
+.projects-header {
+
+    margin-bottom: 4rem;
+
+}
+
+.projects-label {
+
+    display: block;
+
+    color: var(--accent-primary);
+
+    letter-spacing: 0.35em;
+
+    font-size: 0.85rem;
+
+    margin-bottom: 1rem;
+
+}
+
+.projects-heading {
+
+    font-size:
+    clamp(4rem,10vw,8rem);
+
+    line-height: 0.9;
+
+    color: var(--text-primary);
+
+}
+
+/* ========================= Showcase ========================= */
+
+.projects-showcase {
+
+    display: grid;
+
+    grid-template-columns:
+    0.9fr
+    1.1fr;
+
+    gap: 4rem;
+
+    align-items: start;
+
+}
+
+/* ========================= Right ========================= */
+
+.project-right {
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: flex-start;
+
+    gap: 1.5rem;
+
+}
+
+/* ========================= Left ========================= */
+
+.project-content {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 1.5rem;
+
+    padding: 2rem;
+
+    border-radius: 2rem;
+
+    background:
+    rgba(255,255,255,0.03);
+
+    backdrop-filter: blur(20px);
+
+    border:
+    1px solid rgba(255,255,255,0.08);
+
+}
+
+.project-category {
+
+    color: var(--accent-primary);
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.18em;
+
+    font-size: 0.8rem;
+
+}
+
+.project-title {
+
+    font-size:
+    clamp(2.5rem,4vw,4rem);
+
+    line-height: 1;
+
+    color: var(--text-primary);
+
+}
+
+.project-description {
+
+    color: var(--text-muted);
+
+    line-height: 1.9;
+
+}
+
+/* ========================= Tech Pills ========================= */
+
+.project-tech {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 0.8rem;
+
+}
+
+.tech-pill {
+
+    padding:
+    0.7rem
+    1rem;
+
+    border-radius: 999px;
+
+    background:
+    rgba(255,255,255,0.04);
+
+    border:
+    1px solid rgba(255,255,255,0.08);
+
+    color:
+    var(--text-primary);
+
+    font-size: 0.85rem;
+
+}
+
+/* ========================= Github ========================= */
+
+.github-button {
+
+    width: fit-content;
+
+    padding:
+    1rem
+    2rem;
+
+    border-radius: 999px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #c97843,
+        #e6b17c
+    );
+
+    color: black;
+
+    font-weight: 700;
+
+    transition:
+    transform 0.3s ease;
+
+}
+
+.github-button:hover {
+
+    transform:
+    translateY(-3px);
+
+}
+
+/* ========================= Selector ========================= */
+
+.project-selector {
+
+    display: flex;
+
+    gap: 1rem;
+
+    overflow-x: auto;
+
+    scrollbar-width: none;
+
+    justify-content: flex-start;
+
+    padding-bottom: 0.5rem;
+
+}
+
+.project-selector::-webkit-scrollbar {
+    display: none;
+}
+
+.selector-card {
+
+    padding:
+    1rem 1.8rem;
+
+    border-radius: 999px;
+
+    border:
+    1px solid rgba(255,255,255,0.08);
+
+    background:
+    rgba(255,255,255,0.03);
+
+    backdrop-filter:
+    blur(20px);
+
+    color:
+    var(--text-primary);
+
+    cursor: pointer;
+
+    transition:
+    all 0.35s ease;
+
+}
+
+.selector-card:hover {
+
+    transform:
+    translateY(-2px);
+
+}
+
+.selector-card.active {
+
+    background:
+    linear-gradient(
+        135deg,
+        #c97843,
+        #e6b17c
+    );
+
+    color: black;
+    font-weight: 700;
+
+    transform:
+    translateY(-3px);
+
+}
+
+/* ========================= Preview Story Bar ========================= */
+
+.story-progress {
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    right: 0;
+
+    display: flex;
+
+    gap: 0.4rem;
+
+    z-index: 10;
+
+    padding:
+    1rem
+    1rem
+    2rem;
+
+}
+
+.project-preview::before {
+
+    content: '';
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+    right: 0;
+
+    height: 120px;
+
+    background:
+    radial-gradient(
+        ellipse at top,
+        rgba(0,0,0,0.8),
+        rgba(0,0,0,0.5) 45%,
+        transparent 100%
+    );
+
+    z-index: 5;
+
+    pointer-events: none;
+
+}
+
+.progress-line {
+
+    flex: 1;
+
+    height: 4px;
+
+    border-radius: 999px;
+
+    overflow: hidden;
+
+    background:
+    rgba(255,255,255,0.18);
+
+}
+
+.progress-fill {
+
+    width: 0%;
+
+    height: 100%;
+
+    border-radius: inherit;
+
+    background:
+    linear-gradient(
+        90deg,
+        #c97843,
+        #e6b17c
+    );
+
+}
+
+.progress-fill.completed {
+
+    width: 100%;
+
+}
+
+.progress-fill.active {
+
+    animation:
+    fillProgress linear forwards;
+
+}
+
+/* ========================= Image Track ========================= */
+
+.image-track {
+
+    display: flex;
+
+    width: 100%;
+    height: 100%;
+
+    transition:
+    transform 0.8s cubic-bezier(
+        0.22,
+        1,
+        0.36,
+        1
+    );
+
+}
+
+.image-track img {
+
+    flex: 0 0 100%;
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: contain;
+
+    display: block;
+
+}
+
+/* ========================= Preview ========================= */
+
+.project-preview {
+
+    position: relative;
+
+    width: 100%;
+
+    aspect-ratio: 4 / 3;
+
+    overflow: hidden;
+
+    border-radius: 2rem;
+
+    border: 1px solid transparent;
+
+    background:
+    linear-gradient(
+        #0b0b0b,
+        #0b0b0b
+    ) padding-box,
+
+    linear-gradient(
+        135deg,
+        rgba(201,120,67,0.95),
+        rgba(230,177,124,0.75),
+        rgba(201,120,67,0.95)
+    ) border-box;
+
+    box-shadow:
+    0 30px 80px rgba(0,0,0,0.45);
+
+}
+
+.project-preview::before {
+
+    content: '';
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+    right: 0;
+
+    height: 120px;
+
+    background:
+    linear-gradient(
+        to bottom,
+        rgba(0,0,0,0.75),
+        rgba(0,0,0,0.45),
+        transparent
+    );
+
+    z-index: 5;
+
+    pointer-events: none;
+
+}
+
+.project-preview::after {
+
+    content: '';
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+    linear-gradient(
+        to top,
+        rgba(0,0,0,0.55),
+        transparent
+    );
+
+}
+
+.preview-arrow {
+
+    position: absolute;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 52px;
+    height: 52px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(255,255,255,0.12);
+
+    background: rgba(0,0,0,0.35);
+
+    backdrop-filter: blur(20px);
+
+    color: white;
+
+    font-size: 1.3rem;
+
+    cursor: pointer;
+
+    z-index: 10;
+
+    transition: all 0.3s ease;
+
+    opacity: 0;
+
+}
+
+.project-preview:hover .preview-arrow {
+
+    opacity: 1;
+
+    animation:
+    imageReveal 0.8s ease;
+}
+
+.preview-arrow:hover {
+
+    transform:
+    translateY(-50%)
+    scale(1.08);
+
+    transition:
+    transform 0.8s ease,
+    opacity 0.8s ease;
+
+    animation:
+    imageReveal 0.8s ease;
+
+}
+
+.preview-arrow.left {
+
+    left: 1rem;
+
+}
+
+.preview-arrow.right {
+
+    right: 1rem;
+
+}
+
+
+/* ========================= Project Info ========================= */
+.project-title {
+
+    animation:
+    textReveal 0.5s ease;
+
+}
+
+.project-description {
+
+    animation:
+    textReveal 0.7s ease;
+
+}
+
+/* ========================= Animations ========================= */
+
+@keyframes textReveal {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+        translateY(15px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+        translateY(0);
+
+    }
+
+}
+
+@keyframes fillProgress {
+
+    from {
+
+        width: 0%;
+
+    }
+
+    to {
+
+        width: 100%;
+
+    }
+
+}
+
+
+/* ========================= Tablet ========================= */
+
+@media (max-width: 1000px) {
+
+    .projects-showcase {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .project-preview {
+
+        height: 500px;
+
+    }
+
+}
+
+/* ========================= Mobile ========================= */
+
+@media (max-width: 640px) {
+
+    .projects-showcase {
+
+        display: flex;
+        flex-direction: column;
+    }
+
+    .project-right {
+        order: 1;
+    }
+
+    .project-content {
+        order: 2;
+        padding: 1.5rem;
+    }
+
+    .project-title {
+
+        font-size: 2.2rem;
+        line-height: 1;
+    }
+
+    .project-description {
+
+        line-height: 1.7;
+        font-size: 0.95rem;
+    }
+
+    .project-preview {
+
+        height: 260px;
+    }
+
+    .project-selector {
+
+        gap: 0.75rem;
+        padding-bottom: 0.5rem;
+    }
+
+    .selector-card {
+
+        flex-shrink: 0;
+
+        padding: 0.85rem 1.3rem;
+
+        font-size: 0.85rem;
+    }
+
+    .tech-pill {
+
+        font-size: 0.75rem;
+
+        padding: 0.65rem 0.9rem;
+    }
+
+    .projects-heading {
+
+        font-size: 4rem;
+    }
+
+}

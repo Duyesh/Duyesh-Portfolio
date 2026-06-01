@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+@import '/src/styles/variable.css';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+
+  scroll-behavior: smooth;
+
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+  background: var(--bg-primary);
+  overflow-x: hidden;
+  font-family: 'Manrope', sans-serif;
+}
+
+body {
+  color: var(--text-primary);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  border: none;
+  outline: none;
+  background: none;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.main-wrapper {
+  width: 100%;
+  overflow-x: clip;
+}
+
+.hero-heading {
+  background: var(--heading-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.floating-nav-trigger {
+
+    position: fixed;
+
+    top: 2rem;
+
+    right: 2rem;
+
+    width: 56px;
+    height: 56px;
+
+    border-radius: 50%;
+
+    border:
+    1px solid rgba(255,255,255,0.12);
+
+    background:
+    rgba(255,255,255,0.04);
+
+    backdrop-filter:
+    blur(20px);
+
+    color: white;
+
+    font-size: 1.1rem;
+
+    cursor: pointer;
+
+    z-index: 9999;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,0.25);
+
+    animation:
+    navAppear 0.5s ease;
+
+    transition:
+    all 0.3s ease;
+
+}
+
+.floating-nav-trigger:hover {
+
+    transform:
+    scale(1.08);
+
+    border-color:
+    rgba(201,120,67,0.6);
+
+}
+
+@keyframes navAppear {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+        scale(0.7);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+        scale(1);
+
+    }
+
+}
