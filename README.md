@@ -110,15 +110,12 @@ npm run build
 
 ## Project Structure
 
-## Project Structure
-
 ```text
 src
 │
 ├── assets
 │   ├── images
-│   │   ├── favicon.png
-│   │   ├── profile-image.png
+│   │   ├── portrait.png
 │   │   ├── rose.png
 │   │   └── globe.png
 │   │
@@ -164,6 +161,12 @@ src
 └── main.jsx
 ```
 
+
+---
+
+##Portrait Image 
+
+Add Portrait.png image at location ```text src/assets/image/Portrait.png ```
 
 ---
 
